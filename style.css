@@ -15,24 +15,72 @@ html {
   background-size: cover;
   width: 100%;
   height: 24rem;
-  position: relative;
 }
 
 .card-back {
-  background-image: url("./images/bg-card-back.png");
   position: absolute;
   top: 32px;
   right: 16px;
   left: 73px;
-  width: 286px;
-  height: 157px;
+}
+.card-back span {
+  position: absolute;
+  color: var(--White, #fff);
+  text-align: right;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.286px;
+  left: 82%;
+  top: 44%;
 }
 .card-front {
-  background-image: url("./images/bg-card-front.png");
   position: absolute;
   top: 126px;
   right: 73px;
   left: 16px;
+}
+.card-front .card-logo {
+  position: absolute;
+  max-width: 50%;
+  left: 19px;
+  top: 17px;
+}
+.card-section img {
+  width: 100%;
+}
+.user-card-number {
+  position: absolute;
+  top: 50%;
+  left: 19px;
+}
+.user-card-number span {
+  color: var(--White, #fff);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2.2px;
+}
+.name-and-date {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 79%;
+}
+.user-name {
+  color: var(--White, #fff);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.286px;
+  position: absolute;
+  left: 19px;
+}
+.user-date {
+  position: absolute;
+  left: 85%;
+  color: var(--White, #fff);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.286px;
 }
 
 .forms-container {
