@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Space Grotesk";
+  font-weight: 500;
 }
 html {
   font-size: 10px;
@@ -105,6 +106,8 @@ html {
   padding-bottom: 45px;
 }
 .date-container {
+  margin-top: 9px;
+  margin-bottom: 8px;
   display: flex;
   gap: 8px;
 }
@@ -123,6 +126,13 @@ input {
   flex-direction: column;
   gap: 9px;
 }
+/* .wrong-format {
+  border: 1px solid var(--Red, #ff5050) !important;
+}
+.numbers-only {
+  color: var(--Red, #ff5050);
+  font-size: 1rem;
+} */
 .expire-date {
   display: flex;
   gap: 11px;
@@ -136,9 +146,10 @@ input {
   border: 1px solid var(--Light-Grey, #dfdee0);
   background: var(--White, #fff);
   height: 45px;
-  outline: none;
-  justify-content: center;
+
   padding-left: 16px;
+  margin-top: 9px;
+  margin-bottom: 8px;
 }
 form span {
   font-size: 12px;
@@ -201,13 +212,19 @@ form span {
   font-weight: 500;
 }
 .form-active {
+  display: block;
+}
+.active-window {
   display: none !important;
 }
-
 .thank-you-window {
+  margin-top: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+main {
+  padding: 0 24px;
 }
 .thank-you {
   color: var(--Deep-Violet, #21092f);
@@ -229,9 +246,6 @@ form span {
   gap: 16px;
 }
 
-.continue {
-  width: 100%;
-}
 @media only screen and(max-width:330px) {
   .expire-date {
     flex-wrap: wrap;
@@ -244,7 +258,7 @@ form span {
     align-items: center;
   }
   .form-active {
-    display: none;
+    display: block;
   }
 
   .thank-you-window {
@@ -304,6 +318,9 @@ form span {
     font-size: 2.8rem;
   }
   .name-and-date span {
+    font-size: 1.4rem;
+  }
+  .card-back span {
     font-size: 1.4rem;
   }
 }
