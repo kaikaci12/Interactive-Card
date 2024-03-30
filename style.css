@@ -41,9 +41,10 @@ html {
 }
 .card-front .card-logo {
   position: absolute;
-  max-width: 50%;
+
   left: 19px;
   top: 17px;
+  width: 20%;
 }
 .card-section img {
   width: 100%;
@@ -58,6 +59,16 @@ html {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 2.2px;
+}
+@media only screen and (max-width: 349px) {
+  .user-card-number span {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 316px) {
+  .user-card-number span {
+    font-size: 1.3rem;
+  }
 }
 .name-and-date {
   position: absolute;
@@ -191,5 +202,36 @@ form span {
 @media only screen and(max-width:330px) {
   .expire-date {
     flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    display: flex;
+    align-items: center;
+  }
+  main {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .card-section {
+    background-image: url("./images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 33.5%;
+    height: 100vh;
+  }
+
+  .card-front {
+    width: 447px;
+    height: 245px;
+    top: 30%;
+    left: 30%;
+  }
+  .card-back {
+    width: 447px;
+    height: 245px;
+    top: 50%;
+    left: 50%;
   }
 }
