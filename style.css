@@ -39,6 +39,7 @@ html {
   right: 73px;
   left: 16px;
 }
+
 .card-front .card-logo {
   position: absolute;
 
@@ -199,6 +200,38 @@ form span {
   font-size: 18px;
   font-weight: 500;
 }
+.form-active {
+  display: none !important;
+}
+
+.thank-you-window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thank-you {
+  color: var(--Deep-Violet, #21092f);
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 3.422px;
+}
+.thank-you-window span {
+  color: var(--Purplish-Grey, #8f8694);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+.added-details {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.continue {
+  width: 100%;
+}
 @media only screen and(max-width:330px) {
   .expire-date {
     flex-wrap: wrap;
@@ -210,9 +243,42 @@ form span {
     display: flex;
     align-items: center;
   }
+  .form-active {
+    display: none;
+  }
+
+  .thank-you-window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .thank-you {
+    color: var(--Deep-Violet, #21092f);
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 3.422px;
+  }
+  .added-details {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .continue {
+    width: 38.1rem;
+  }
+  .thank-you-window span {
+    color: var(--Purplish-Grey, #8f8694);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+  }
   main {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    width: 100vw;
   }
   .card-section {
     background-image: url("./images/bg-main-desktop.png");
@@ -233,5 +299,11 @@ form span {
     height: 245px;
     top: 50%;
     left: 50%;
+  }
+  .user-card-number span {
+    font-size: 2.8rem;
+  }
+  .name-and-date span {
+    font-size: 1.4rem;
   }
 }
