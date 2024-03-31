@@ -39,25 +39,32 @@
       </div>
     </div>
     <main>
-      <div class="thank-you-window active-window">
-        <img src="./images/icon-complete.svg" alt="complete-logo" />
-        <div class="added-details">
-          <h2 class="thank-you">THANK YOU!</h2>
-          <span>We've added your card details</span>
-        </div>
-        <div class="submit-div continue">
-          <button class="submit-div">Continue</button>
+      <div class="new-window">
+        <div class="thank-you-window">
+          <img src="./images/icon-complete.svg" alt="complete-logo" />
+          <div class="added-details">
+            <h2 class="thank-you">THANK YOU!</h2>
+            <span>We've added your card details</span>
+          </div>
+          <div class="submit-div continue">
+            <button class="submit-div">Continue</button>
+          </div>
         </div>
       </div>
-      <div class="forms-container form-active">
+
+      <div class="forms-container">
         <form>
           <div class="name info">
             <span>Cardholder Name</span>
             <input
+              oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')"
               type="text"
               placeholder="e.g. Jane Appleseed"
               class="card-input"
+              maxlength="20"
+              minlength="3"
             />
+
             <span class="numbers-only passive-span error-span"
               >Can't be blank</span
             >
@@ -69,6 +76,7 @@
               placeholder="e.g. 1234 5678 9123 0000"
               class="card-input"
               id="card-num-input"
+              maxlength="16"
             />
 
             <span class="numbers-only passive-span error-span"
@@ -83,16 +91,18 @@
               <span>Exp. Date (MM/YY)</span>
               <div class="date-container">
                 <input
-                  type="number"
+                  oninput="this.value = this.value.replace(/\D/g, '')"
+                  type="text"
                   placeholder="MM"
                   class="date card-input"
                   maxlength="2"
                 />
                 <input
-                  type="number"
+                  oninput="this.value = this.value.replace(/\D/g, '')"
+                  type="text"
                   placeholder="YY"
                   class="date card-input"
-                  maxlength="4"
+                  maxlength="2"
                 />
               </div>
               <span class="numbers-only passive-span error-span"
@@ -102,9 +112,11 @@
             <div class="cvc">
               <span>CVC</span>
               <input
-                type="number"
+                oninput="this.value = this.value.replace(/\D/g, '')"
+                type="text"
                 placeholder="e.g. 123"
                 class="cvc-input card-input"
+                maxlength="3"
               />
               <span class="numbers-only passive-span error-span"
                 >Can't be blank</span
