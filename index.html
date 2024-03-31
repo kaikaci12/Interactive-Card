@@ -68,13 +68,14 @@
               type="text"
               placeholder="e.g. 1234 5678 9123 0000"
               class="card-input"
-              id="card-num"
+              id="card-num-input"
             />
-            <span class="numbers-only card-number passive-span error-span"
-              >Wrong format, numbers only</span
-            >
-            <span class="numbers-only card-number passive-span error-span"
+
+            <span class="numbers-only passive-span error-span"
               >Can't be blank</span
+            >
+            <span class="numbers-only passive-span error-span" id="number-error"
+              >Wrong format, numbers only</span
             >
           </div>
           <div class="expire-date">
