@@ -350,4 +350,9 @@ main {
   .card-back span {
     font-size: 1.4rem;
   }
+  .submit-div:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: purple;
+  }
 }

@@ -5,6 +5,7 @@ const numberError = document.getElementById("number-error");
 const cardNumberInput = document.querySelector("#card-num-input");
 const newWindow = document.querySelector(".new-window");
 const forms = document.querySelector(".forms-container");
+const continueBtn = document.querySelector(".continue");
 let thankYouWindow = false;
 
 confirmBtn.addEventListener("click", () => {
@@ -20,7 +21,6 @@ confirmBtn.addEventListener("click", () => {
       errorSpans[index].classList.remove("active-span");
     }
   });
-
   if (isNaN(cardNumberInput.value)) {
     isError = true;
     numberError.classList.add("active-span");
@@ -36,7 +36,6 @@ confirmBtn.addEventListener("click", () => {
     newWindow.classList.remove("active-window");
   }
 });
-
 cardInputs.forEach((item, index) => {
   item.addEventListener("change", () => {
     if (item.value === "") {
@@ -54,4 +53,7 @@ cardInputs.forEach((item, index) => {
   } else {
     numberError.classList.remove("active-span");
   }
+});
+continueBtn.addEventListener("click", () => {
+  document.location.reload();
 });
