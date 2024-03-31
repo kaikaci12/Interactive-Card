@@ -126,13 +126,22 @@ input {
   flex-direction: column;
   gap: 9px;
 }
-/* .wrong-format {
+
+.wrong-format {
   border: 1px solid var(--Red, #ff5050) !important;
 }
+.passive-span {
+  display: none;
+}
+
 .numbers-only {
   color: var(--Red, #ff5050);
   font-size: 1rem;
-} */
+}
+.active-span {
+  display: block !important;
+}
+
 .expire-date {
   display: flex;
   gap: 11px;

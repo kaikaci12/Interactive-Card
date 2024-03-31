@@ -56,17 +56,26 @@
             <input
               type="text"
               placeholder="e.g. Jane Appleseed"
-              class="card-info card-input"
+              class="card-input"
             />
+            <span class="numbers-only passive-span error-span"
+              >Can't be blank</span
+            >
           </div>
           <div class="card-number info">
             <span>Card Number</span>
             <input
               type="text"
               placeholder="e.g. 1234 5678 9123 0000"
-              class="card-info card-input wrong-format"
+              class="card-input"
+              id="card-num"
             />
-            <span class="numbers-only">Wrong format, numbers only</span>
+            <span class="numbers-only card-number passive-span error-span"
+              >Wrong format, numbers only</span
+            >
+            <span class="numbers-only card-number passive-span error-span"
+              >Can't be blank</span
+            >
           </div>
           <div class="expire-date">
             <div class="month-and-year">
@@ -75,30 +84,34 @@
                 <input
                   type="number"
                   placeholder="MM"
-                  class="date wrong-format"
+                  class="date card-input"
                   maxlength="2"
                 />
                 <input
                   type="number"
                   placeholder="YY"
-                  class="date wrong-format"
+                  class="date card-input"
                   maxlength="4"
                 />
               </div>
-              <span class="numbers-only">Can't be blank</span>
+              <span class="numbers-only passive-span error-span"
+                >Can't be blank</span
+              >
             </div>
             <div class="cvc">
               <span>CVC</span>
               <input
                 type="number"
                 placeholder="e.g. 123"
-                class="wrong-format"
+                class="cvc-input card-input"
               />
-              <span class="numbers-only">Can't be blank</span>
+              <span class="numbers-only passive-span error-span"
+                >Can't be blank</span
+              >
             </div>
           </div>
         </form>
-        <div class="submit-div">
+        <div class="submit-div confirm">
           <button>Confirm</button>
         </div>
       </div>
