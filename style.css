@@ -124,6 +124,11 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   gap: 8px;
 }
+.date-error {
+  display: none;
+  color: var(--Red, #ff5050);
+  font-size: 1rem;
+}
 form {
   display: flex;
   flex-direction: column;

@@ -11,11 +11,11 @@ const cardNumCode = document.querySelector(".card-num-code");
 const cardName = document.querySelector(".user-name");
 const cardHolderInput = document.getElementById("card-holder-name");
 const cvcInput = document.querySelector(".cvc-input");
-const monthInput = document.querySelector(".month-input");
-const yearInput = document.querySelector(".year-input");
 const cardMonth = document.querySelector(".user-month");
 const cardYear = document.querySelector(".user-year");
 const dateError = document.querySelector(".date-error");
+const yearInput = document.querySelector(".year-input");
+const monthInput = document.querySelector(".month-input");
 let thankYouWindow = false;
 
 confirmBtn.addEventListener("click", () => {
@@ -25,12 +25,14 @@ confirmBtn.addEventListener("click", () => {
     if (item.value === "") {
       item.classList.add("wrong-format");
       errorSpans[index].classList.add("active-span");
+
       isError = true;
     } else {
       item.classList.remove("wrong-format");
       errorSpans[index].classList.remove("active-span");
     }
   });
+
   if (isNaN(cardNumberInput.value)) {
     isError = true;
     numberError.classList.add("active-span");
@@ -66,6 +68,7 @@ confirmBtn.addEventListener("click", () => {
     newWindow.classList.remove("active-window");
   }
 });
+
 cardInputs.forEach((item, index) => {
   item.addEventListener("change", () => {
     if (item.value === "") {
@@ -86,24 +89,31 @@ cardInputs.forEach((item, index) => {
     numberError.classList.remove("active-span");
   }
 });
+
 continueBtn.addEventListener("click", () => {
   document.location.reload();
 });
+
 cardHolderInput.addEventListener("input", () => {
   cardName.innerHTML = cardHolderInput.value;
 });
+
 cardNumberInput.addEventListener("input", () => {
   cardNumCode.innerHTML = cardNumberInput.value;
 });
+
 cvcInput.addEventListener("input", () => {
   cvcCode.innerHTML = cvcInput.value;
 });
+
 monthInput.addEventListener("input", () => {
   cardMonth.innerHTML = monthInput.value + "/";
 });
+
 yearInput.addEventListener("input", () => {
   cardYear.innerHTML = " " + yearInput.value;
 });
+
 monthInput.addEventListener("change", () => {
   if (monthInput.value > 12 || monthInput.value.length === 1) {
     monthInput.classList.add("wrong-format");
@@ -116,6 +126,7 @@ monthInput.addEventListener("change", () => {
     dateError.innerHTML = "";
   }
 });
+
 yearInput.addEventListener("change", () => {
   if (
     yearInput.value.length === 1 ||
