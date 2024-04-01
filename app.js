@@ -10,6 +10,11 @@ const cvcCode = document.querySelector(".cvc-code");
 const cardNumCode = document.querySelector(".card-num-code");
 const cardName = document.querySelector(".user-name");
 const cardDate = document.querySelector(".user-date");
+const cardHolderInput = document.getElementById("card-holder-name");
+const cvcInput = document.querySelector(".cvc-input");
+const monthInput = document.querySelector(".month-input");
+const yearInput = document.querySelector(".year-input");
+
 let thankYouWindow = false;
 
 confirmBtn.addEventListener("click", () => {
@@ -60,4 +65,19 @@ cardInputs.forEach((item, index) => {
 });
 continueBtn.addEventListener("click", () => {
   document.location.reload();
+});
+cardHolderInput.addEventListener("input", () => {
+  cardName.innerHTML = cardHolderInput.value;
+});
+cardNumberInput.addEventListener("input", () => {
+  cardNumCode.innerHTML = cardNumberInput.value;
+});
+cvcInput.addEventListener("input", () => {
+  cvcCode.innerHTML = cvcInput.value;
+});
+monthInput.addEventListener("input", () => {
+  cardDate.innerHTML = monthInput.value + "/00";
+});
+yearInput.addEventListener("input", () => {
+  cardDate.innerHTML = "/" + yearInput.value;
 });

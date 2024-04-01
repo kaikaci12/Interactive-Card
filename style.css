@@ -100,7 +100,22 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: 500;
   letter-spacing: 1.286px;
 }
-
+.user-month {
+  position: absolute;
+  left: 85%;
+  color: var(--White, #fff);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.286px;
+}
+.user-year {
+  position: absolute;
+  left: 92%;
+  color: var(--White, #fff);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.286px;
+}
 .forms-container {
   margin-top: 91px;
   display: flex;
@@ -225,18 +240,21 @@ form span {
   font-size: 18px;
   font-weight: 500;
 }
-.form-active {
-  display: none;
-}
-.active-window {
-  display: none;
-}
 
 .thank-you-window {
   margin-top: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.new-window {
+  display: none;
+}
+.form-active {
+  display: none;
+}
+.active-window {
+  display: block !important;
 }
 main {
   padding: 0 24px;
