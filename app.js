@@ -6,6 +6,10 @@ const cardNumberInput = document.querySelector("#card-num-input");
 const newWindow = document.querySelector(".new-window");
 const forms = document.querySelector(".forms-container");
 const continueBtn = document.querySelector(".continue");
+const cvcCode = document.querySelector(".cvc-code");
+const cardNumCode = document.querySelector(".card-num-code");
+const cardName = document.querySelector(".user-name");
+const cardDate = document.querySelector(".user-date");
 let thankYouWindow = false;
 
 confirmBtn.addEventListener("click", () => {
